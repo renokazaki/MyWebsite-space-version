@@ -8,6 +8,8 @@ import Menu from "./_components/Section/Menu";
 import { Suspense } from "react";
 import { Loading } from "./_components/Loading";
 import {SpaceSky} from "./_components/ModelsComponents/SpaceSky";
+import { Earth } from "./_components/ModelsComponents/Earth";
+
 function App() {
   return (
     <>
@@ -16,6 +18,7 @@ function App() {
         <Float floatIntensity={1} speed={1}>
           <SpaceSky />
         </Float>
+        <Earth position={[7, -1, -40]} scale={6} rotation={[0, -1, 0]}/>
         <ScrollControls
           pages={config.sections.length}
           damping={0.1}

@@ -1,7 +1,6 @@
 import SectionTitle from "../SectionTitle";
 import { Float, PresentationControls } from "@react-three/drei";
 import { useMobile } from "../../../hooks/useMobile";
-
 export const HomeSection = () => {
   const { isMobile } = useMobile();
   return (
@@ -12,7 +11,7 @@ export const HomeSection = () => {
         <PresentationControls>
           <SectionTitle
             size={isMobile ? 0.1 : 0.3}
-            position-x={isMobile ? -0.6 : -1.5}
+            position-x={isMobile ? -0.6 : -1.8}
             position-y={isMobile ? 1.5 : 1.5}
           >
             Welcome to My Page
