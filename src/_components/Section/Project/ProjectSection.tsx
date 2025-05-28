@@ -2,7 +2,6 @@ import SectionTitle from "../SectionTitle";
 import Monitor from "../../ModelsComponents/Monitor";
 import { PresentationControls, RoundedBox } from "@react-three/drei";
 import { useMobile } from "../../../hooks/useMobile";
-import { Cloud } from "@react-three/drei";
 export const ProjectSection = ({
   SECTIONS_DISTANCE,
 }: {
@@ -13,13 +12,6 @@ export const ProjectSection = ({
   return (
     <>
       {/* PROJECTS */}
-      <Cloud
-        position={[8, -8, 10]}
-        segments={10}
-        speed={1}
-        opacity={0.7} // opacityを上げる
-        seed={3} // 形状の種（変更すると形が変わる）
-      />
       <group position-z={SECTIONS_DISTANCE - 2.5}>
         <group position-x={1.5}>
           <PresentationControls>

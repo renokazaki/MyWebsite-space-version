@@ -1,6 +1,5 @@
 import SectionTitle from "../SectionTitle";
-import Mailbox from "../../ModelsComponents/Mailbox";
-import { Float, PresentationControls } from "@react-three/drei";
+import { PresentationControls } from "@react-three/drei";
 import { useMobile } from "../../../hooks/useMobile";
 
 
@@ -24,17 +23,8 @@ export const ContactSection = ({
             CONTACT
           </SectionTitle>
         </PresentationControls>
-        <PresentationControls>
-          <Mailbox
-            scale={0.25}
-            rotation-y={1.25 * Math.PI}
-            position-x={isMobile ? 0.6 : 1}
-            position-y={0.25}
-            position-z={0.5}
-          />
-        </PresentationControls>
 
-        <Float floatIntensity={1.5} speed={3}></Float>
+
       </group>
     </>
   );
