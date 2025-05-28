@@ -1,6 +1,6 @@
 import SectionTitle from "../SectionTitle";
 import Monitor from "../../ModelsComponents/Monitor";
-import { PresentationControls, RoundedBox } from "@react-three/drei";
+import { Float, PresentationControls, RoundedBox } from "@react-three/drei";
 import { useMobile } from "../../../hooks/useMobile";
 export const ProjectSection = ({
   SECTIONS_DISTANCE,
@@ -30,6 +30,7 @@ export const ProjectSection = ({
             scale={0.8}
           >
             <PresentationControls>
+              <Float floatIntensity={1} speed={0.6}>
               <Monitor
                 scale={0.02}
                 position-y={1}
@@ -39,6 +40,7 @@ export const ProjectSection = ({
               <RoundedBox scale-x={2} position-y={0.5} position-z={-1}>
                 <meshStandardMaterial color="white" />
               </RoundedBox>
+              </Float>
             </PresentationControls>
           </group>
         </group>

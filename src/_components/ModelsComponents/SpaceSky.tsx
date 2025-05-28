@@ -5,13 +5,13 @@ export function SpaceSky() {
     <>
       {/* 宇宙の星空背景 */}
       <Stars 
-        radius={100} 
+        radius={150} 
         depth={50} 
-        count={500} 
+        count={800} 
         factor={4} 
         saturation={0} 
         fade 
-        speed={0.1} 
+        speed={0.05} 
       />
     </>
   );

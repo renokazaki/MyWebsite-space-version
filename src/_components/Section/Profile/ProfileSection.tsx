@@ -1,6 +1,7 @@
 import SectionTitle from "../SectionTitle";
 import { useMobile } from "../../../hooks/useMobile";
-import { PresentationControls } from "@react-three/drei";
+import { Float, PresentationControls } from "@react-three/drei";
+import { SpaceSatelite } from "../../ModelsComponents/SpaceSatelite";
 
 export const ProfileSection = ({
   SECTIONS_DISTANCE,
@@ -23,7 +24,12 @@ export const ProfileSection = ({
               PROFILE
             </SectionTitle>
           </PresentationControls>
-        </group>
+          <PresentationControls>
+          <Float floatIntensity={1} speed={0.6}>
+            <SpaceSatelite scale={1.5} position={[-1,1,1]} rotation={[0,Math.PI/1.5,0]}/>
+          </Float>
+          </PresentationControls>
+          </group>
       </group>
     </>
   );

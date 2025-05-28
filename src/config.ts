@@ -110,21 +110,24 @@ export const config = {
         "Three.jsで提供されている物理法則を実装することで、よりリアルなゲーム体験ができるようにしました。",
     },
     {
-      name: "動画共有SNS",
+      name: "作成中",
       image: "../textures/ComingSoon.PNG",
       repository: "https://github.com/renokazaki/Tower-Battle",
       link: "https://tower-battle.vercel.app",
       techIcons: [
-        { name: "React", icon: "/icons/React.png" },
-        { name: "Three.js", icon: "/icons/threejs.png" },
+        { name: "Next.js", icon: "/icons/Nextjs.png" },
+        { name: "Hono.js", icon: "/icons/Honojs.png" },
         { name: "TypeScript", icon: "/icons/TypeScript.png" },
         { name: "Tailwind CSS", icon: "/icons/Tailwindcss.png" },
-        { name: "npm", icon: "/icons/Npm.png" },
+        { name: "Shadcn/ui", icon: "/icons/Shadcn.png" },
+        { name: "Prisma", icon: "/icons/Prisma.png" },
+        { name: "Clerk", icon: "/icons/Clerk.png" },
+        { name: "Bun", icon: "/icons/Bun.png" },
       ],
       description:
         "動画共有SNSです。Youtubeから提供されているAPIを使用することで動画の詳細を取得して表示しています。",
       point:
-        "YoutubeのAPIを使用することで動画の詳細を取得して表示することができました。",
+        "YoutubeのAPIを使用する。処理速度の速さにこだわる",
     },
   ],
 
