@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { HomeSection, ProfileSection, ProjectSection, ContactSection } from "./Section/index";
 import { config } from "../config";
-import Star from "./ModelsComponents/Star";
 import { Astronaut } from "./ModelsComponents/Astronaut";
 
 const SECTIONS_DISTANCE = 10;
