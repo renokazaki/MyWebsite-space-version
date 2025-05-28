@@ -112,9 +112,15 @@ export const config = {
     {
       name: "動画共有SNS",
       image: "../textures/ComingSoon.PNG",
-      repository: "",
-      link: "",
-      techIcons: [{}],
+      repository: "https://github.com/renokazaki/Tower-Battle",
+      link: "https://tower-battle.vercel.app",
+      techIcons: [
+        { name: "React", icon: "/icons/React.png" },
+        { name: "Three.js", icon: "/icons/threejs.png" },
+        { name: "TypeScript", icon: "/icons/TypeScript.png" },
+        { name: "Tailwind CSS", icon: "/icons/Tailwindcss.png" },
+        { name: "npm", icon: "/icons/Npm.png" },
+      ],
       description:
         "動画共有SNSです。Youtubeから提供されているAPIを使用することで動画の詳細を取得して表示しています。",
       point:
