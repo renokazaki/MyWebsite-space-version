@@ -7,7 +7,7 @@ export const config = {
 
   projects: [
     {
-      name: "習慣応援SNS",
+      name: "習慣応援SNS(Line Messaging API使用)",
       image: "../textures/ActiveLink.PNG",
       repository: "https://github.com/renokazaki/ActiveLink",
       link: "https://active-link-frontend.vercel.app",
@@ -21,9 +21,9 @@ export const config = {
         { name: "Clerk", icon: "/icons/Clerk.png" },
         { name: "Bun", icon: "/icons/Bun.png" },
       ],
-      description: "友人と習慣の継続を促しあえるSNSです。",
+      description: "友人と習慣の継続を促しあえるSNSです。Line Messaging APIを使用して友達が活動を始めると公式アカウントからリアルタイムでメッセージを受け取れます。",
       point:
-        "バックエンドにHono.jsを採用し、Next.jsのSSRやReactのuseOptimistic、Suspenseを積極的に活用することでユーザビリティの向上を意識しました。また、LineのMessaging APIを使用して友達が活動を始めると公式アカウントからリアルタイムでメッセージを受け取れるようにしました。",
+        "バックエンドにHono.jsを採用し、Next.jsのSSRやReactのuseOptimistic、Suspenseを積極的に活用することで処理速度とユーザビリティの向上を意識しました。",
     },
     {
       name: "タスク管理アプリ",
