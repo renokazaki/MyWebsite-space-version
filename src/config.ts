@@ -23,7 +23,7 @@ export const config = {
       ],
       description: "友人と習慣の継続を促しあえるSNSです。",
       point:
-        "バックエンドにHono.jsを採用し、Next.jsのSSRやReactのuseOptimistic、Suspenseを積極的に活用することでユーザビリティの向上を意識しました。",
+        "バックエンドにHono.jsを採用し、Next.jsのSSRやReactのuseOptimistic、Suspenseを積極的に活用することでユーザビリティの向上を意識しました。また、LineのMessaging APIを使用して友達が活動を始めると公式アカウントからリアルタイムでメッセージを受け取れるようにしました。",
     },
     {
       name: "タスク管理アプリ",
