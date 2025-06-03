@@ -15,6 +15,7 @@ import {
 } from "./Section/index";
 import { config } from "../config";
 import { Astronaut } from "./ModelsComponents/Astronaut";
+import { SpaceSky } from "./ModelsComponents/SpaceSky";
 
 const SECTIONS_DISTANCE = 10;
 
@@ -48,6 +49,7 @@ export default function Experience() {
   });
   return (
     <>
+      <SpaceSky />
       <Environment preset="night" />
       <directionalLight position={[1, 1, 1]} intensity={4} />
       <ambientLight intensity={2} />

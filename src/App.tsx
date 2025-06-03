@@ -1,13 +1,15 @@
 import { Canvas } from "@react-three/fiber";
-import Experience from "./_components/Experience";
 import { ScrollControls, Scroll } from "@react-three/drei";
 import { config } from "./config";
 import Interface from "./_components/Section/InterFace";
 import { MotionConfig } from "framer-motion";
 import Menu from "./_components/Section/Menu";
-import { Suspense } from "react";
 import { Loading } from "./_components/Loading";
+import { lazy, Suspense as LazySuspense } from "react";
 import { Earth } from "./_components/ModelsComponents/Earth";
+
+// 3Dモデルを遅延読み込み
+const LazyExperience = lazy(() => import("./_components/Experience"));
 
 function App() {
   return (
@@ -21,9 +23,9 @@ function App() {
           maxSpeed={0.2}
         >
           <group position-y={-1}>
-            <Suspense>
-              <Experience />
-            </Suspense>
+            <LazySuspense fallback={null}>
+              <LazyExperience />
+            </LazySuspense>
           </group>
           <Scroll html>
             <MotionConfig transition={{ duration: 1 }}>
