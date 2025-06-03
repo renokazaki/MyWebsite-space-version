@@ -7,8 +7,8 @@ Title: Astronaut rigged and animated
 */
 
 import * as THREE from 'three'
-import { useRef, useEffect, type JSX } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
+import { useRef, type JSX } from 'react'
+import { useGLTF } from '@react-three/drei'
 
 type GLTFResult = {
   nodes: {
@@ -25,14 +25,10 @@ type GLTFResult = {
 
 export function Astronaut(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>(null)
-  const { nodes, materials, animations } = useGLTF(
+  const { nodes, materials } = useGLTF(
     'models/astronaut.glb'
   ) as unknown as GLTFResult
-  const { actions } = useAnimations(animations as unknown as THREE.AnimationClip[], group)
-
-  useEffect(() => {
-    actions?.['astro_bones|idle_1']?.play()
-  }, [actions])
+ 
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">

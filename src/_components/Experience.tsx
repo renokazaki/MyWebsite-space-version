@@ -55,7 +55,7 @@ export default function Experience() {
       <ambientLight intensity={2} />
       <Float floatIntensity={1} speed={3}>
         <PresentationControls>
-          <Astronaut scale={0.13} />
+          <Astronaut scale={0.13} rotation={[0.4, 0, 0]} />
         </PresentationControls>
       </Float>
       {/* Section */}
