@@ -1,5 +1,5 @@
 import SectionTitle from "../SectionTitle";
-import { Float, PresentationControls } from "@react-three/drei";
+import {  PresentationControls } from "@react-three/drei";
 import { useMobile } from "../../../hooks/useMobile";
 export const HomeSection = () => {
   const { isMobile } = useMobile();
@@ -7,7 +7,6 @@ export const HomeSection = () => {
     <>
       {/* HOME  */}
    
-      <Float floatIntensity={1.5} speed={3}>
         <PresentationControls>
           <SectionTitle
             size={isMobile ? 0.1 : 0.3}
@@ -17,7 +16,6 @@ export const HomeSection = () => {
             Welcome to My Page
           </SectionTitle>
         </PresentationControls>
-      </Float>
       <group>
         <PresentationControls>
           <SectionTitle

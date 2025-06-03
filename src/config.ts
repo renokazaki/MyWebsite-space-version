@@ -142,10 +142,10 @@ about: {
     title: "スキル",
     icon: "Award",
     content:
-      "Next.js, React, TypeScript, Node.js, Express, Hono.js, Tailwind CSS, AWS, Docker, GitHub Actions, Shadcn/ui, Prisma, Drizzle, Clerk, Npm, Bun, Pnpm, Three.js, R3F, GSAP",
+      "Next.js, React, TypeScript, Node.js, Express, Hono.js, Tailwind CSS, AWS, FireBaseDocker, GitHub Actions, Shadcn/ui, Prisma, Drizzle, Clerk, Npm, Bun, Pnpm, Three.js, R3F, GSAPなど",
   },
   achievement: {
-    title: "開発実績",
+    title: "最近の開発実績",
     icon: "Heart",
     content: `【Code Lesson プロジェクト参加中】
 プログラミング学習webサイト「Code Lesson」にコントリビューターとして参加。Next.js、Express、TypeScript、Docker、AWS、GitHub Actionsを使用。
@@ -159,16 +159,16 @@ URL: https://code-lesson.com/
     title: "アピールポイント",
     icon: "Coffee",
     content: `【継続的な技術習得】
-ReactやNext.js、TypeScriptを日常的に触り、新機能や最新のベストプラクティスを積極的に学習。社内Udemy活用ランキング1位を獲得。
+Next.js、React、TypeScriptを日常的に触り、新機能や最新のベストプラクティスを積極的に学習。社内Udemy活用ランキング1位を獲得。
 
 【積極的なコミュニティ活動】
-チーム開発プロジェクト「Code Lesson」への参画、メンターとの技術相談、技術コミュニティへの参加、勉強会への積極的参加。
+チーム開発プロジェクト「Code Lesson」への参画、ハッカソンの参加、メンターとの技術相談、技術コミュニティへの参加、勉強会への積極的参加。
 
 【英語技術情報への対応力】
 英語の技術情報に苦手意識がなく、最新の海外技術情報もスムーズにキャッチアップ可能。
 
 【実践的な開発経験】
-外部API連携、SSR活用、楽観的UI更新、Suspenseを使った非同期処理改善、モノレポ構成など、実務で活用できる技術的取り組みを経験。`,
+外部API連携、CICD、AWSを使ったホスティング、モノレポ構成など、実務で活用できる技術的取り組みを積極的に経験。`,
   },
 },
 
