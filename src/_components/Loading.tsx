@@ -55,7 +55,7 @@ export const Loading = () => {
 
         {/* ローディングメッセージ */}
         <p className="text-blue-300 text-sm animate-pulse">
-          Loading...
+          宇宙を構築中...
         </p>
 
         {/* 追加の装飾的な要素 */}
