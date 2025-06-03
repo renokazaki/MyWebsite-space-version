@@ -17,10 +17,9 @@ export default function ProfileInterface() {
 // configからaboutオブジェクトの各セクションを取得し、適切な型にキャスト
 const aboutSections = [
   config.about.profile,
-  config.about.education,
   config.about.skills,
-  config.about.hobbies,
-  config.about.personality
+  config.about.achievement,
+  config.about.appealPoint
 ] as AboutSection[];
 
 // アイコンを描画するコンポーネント

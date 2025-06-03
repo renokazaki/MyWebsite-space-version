@@ -131,36 +131,46 @@ export const config = {
     },
   ],
 
-  // 自己紹介セクションの構造
-  about: {
-    profile: {
-      title: "プロフィール",
-      icon: "User",
-      content: "名前：岡崎 蓮\n西暦：1999年8月21日 25歳\n",
-    },
-    education: {
-      title: "学歴・職歴",
-      icon: "GraduationCap",
-      content:
-        "2023年 駒澤大学 卒業\n2023-現在 株式会社ウィズ・ワン エンジニア",
-    },
-    skills: {
-      title: "保有資格",
-      icon: "Award",
-      content:
-        "・TOEIC スコア830点\n・基本情報技術者試験\n・ServiceNow CSA\n・ServiceNow CAD\n・ServiceNow ITSM\n・秘書技能検定準1級",
-    },
-    personality: {
-      title: "性格",
-      icon: "Heart",
-      content: "・前向き\n・向上心",
-    },
-    hobbies: {
-      title: "趣味",
-      icon: "Coffee",
-      content: "・運動\n・映画鑑賞\n・旅行\n",
-    },
+// 自己紹介セクションの構造
+about: {
+  profile: {
+    title: "プロフィール",
+    icon: "User",
+    content: "名前：岡崎 蓮\n西暦：1999年8月21日 25歳\n",
   },
+  skills: {
+    title: "スキル",
+    icon: "Award",
+    content:
+      "Next.js, React, TypeScript, Node.js, Express, Hono.js, Tailwind CSS, AWS, Docker, GitHub Actions, Shadcn/ui, Prisma, Drizzle, Clerk, Npm, Bun, Pnpm, Three.js, R3F, GSAP",
+  },
+  achievement: {
+    title: "開発実績",
+    icon: "Heart",
+    content: `【Code Lesson プロジェクト参加中】
+プログラミング学習webサイト「Code Lesson」にコントリビューターとして参加。Next.js、Express、TypeScript、Docker、AWS、GitHub Actionsを使用。
+URL: https://code-lesson.com/
+
+
+【AI駆動個人開発ハッカソン参加中】
+マネタイズを目標としたAI駆動開発によるオリジナルプロダクト作成に挑戦中。`,
+  },
+  appealPoint: {
+    title: "アピールポイント",
+    icon: "Coffee",
+    content: `【継続的な技術習得】
+ReactやNext.js、TypeScriptを日常的に触り、新機能や最新のベストプラクティスを積極的に学習。社内Udemy活用ランキング1位を獲得。
+
+【積極的なコミュニティ活動】
+チーム開発プロジェクト「Code Lesson」への参画、メンターとの技術相談、技術コミュニティへの参加、勉強会への積極的参加。
+
+【英語技術情報への対応力】
+英語の技術情報に苦手意識がなく、最新の海外技術情報もスムーズにキャッチアップ可能。
+
+【実践的な開発経験】
+外部API連携、SSR活用、楽観的UI更新、Suspenseを使った非同期処理改善、モノレポ構成など、実務で活用できる技術的取り組みを経験。`,
+  },
+},
 
   contact: {
     name: "Ren Okazaki",
