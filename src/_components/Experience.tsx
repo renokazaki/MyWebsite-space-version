@@ -3,6 +3,7 @@ import {
   Float,
   PresentationControls,
   useScroll,
+  Preload,
 } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
@@ -14,8 +15,8 @@ import {
   ContactSection,
 } from "./Section/index";
 import { config } from "../config";
-import { Astronaut } from "./ModelsComponents/Astronaut";
 import { SpaceSky } from "./ModelsComponents/SpaceSky";
+import { Astronaut } from "./ModelsComponents/Astronaut";
 
 const SECTIONS_DISTANCE = 10;
 
@@ -55,7 +56,7 @@ export default function Experience() {
       <ambientLight intensity={2} />
       <Float floatIntensity={1} speed={3}>
         <PresentationControls>
-          <Astronaut scale={0.13} rotation={[0.4, 0, 0]} />
+          <Astronaut scale={0.4}/>
         </PresentationControls>
       </Float>
       {/* Section */}
@@ -65,6 +66,7 @@ export default function Experience() {
         <ProfileSection SECTIONS_DISTANCE={SECTIONS_DISTANCE} />
         <ContactSection SECTIONS_DISTANCE={SECTIONS_DISTANCE} />
       </group>
+      <Preload all />
     </>
   );
 }

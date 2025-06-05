@@ -5,11 +5,26 @@ Monitor by Poly by Google [CC-BY] (https://creativecommons.org/licenses/by/3.0/)
 */
 
 import { useGLTF } from "@react-three/drei";
-import type { JSX } from "react";
+import { useState, useEffect, useMemo, useRef, type JSX } from "react";
 import * as THREE from "three";
 
+// モデルパスを定数化
+const MODEL_PATH = "/models/Monitor.glb";
+
+// 事前ロード
+useGLTF.preload(MODEL_PATH);
+
 export default function Monitor(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF("/models/Monitor.glb") as unknown as {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef<THREE.Group>(null);
+  
+  // 遅延ロードでパフォーマンス向上
+  useEffect(() => {
+    const timer = setTimeout(() => setVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+  
+  const { nodes, materials } = useGLTF(MODEL_PATH) as unknown as {
     nodes: {
       iMac: THREE.Mesh;
     };
@@ -17,12 +32,34 @@ export default function Monitor(props: JSX.IntrinsicElements['group']) {
       Mat: THREE.Material;
     };
   };
+  
+  // マテリアルの最適化
+  const optimizedMaterial = useMemo(() => {
+    if (!materials.Mat) return null;
+    
+    // 元のマテリアルをクローンして最適化
+    const material = materials.Mat.clone();
+    
+    // マテリアルがMeshStandardMaterialの場合
+    if (material instanceof THREE.MeshStandardMaterial) {
+      material.roughness = 0.7;
+      material.metalness = 0.3;
+      material.envMapIntensity = 0.5;
+    }
+    
+    return material;
+  }, [materials]);
+  
+  // 表示されていない場合は何もレンダリングしない
+  if (!visible) return null;
 
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.iMac.geometry} material={materials.Mat} />
+    <group ref={ref} {...props} dispose={null}>
+      <mesh 
+        geometry={nodes.iMac.geometry} 
+        material={optimizedMaterial || materials.Mat}
+        frustumCulled={true}
+      />
     </group>
   );
 }
-
-useGLTF.preload("/models/Monitor.glb");

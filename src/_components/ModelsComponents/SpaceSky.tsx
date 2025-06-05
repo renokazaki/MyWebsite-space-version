@@ -3,9 +3,9 @@ import { Float, Stars } from "@react-three/drei";
 export function SpaceSky() {
   return (
     <>
-    <Float floatIntensity={1} >
+    <Float floatIntensity={0.1} >
         <Stars 
-        radius={300} 
+        radius={50} 
         depth={100} 
         count={800} 
         factor={4} 

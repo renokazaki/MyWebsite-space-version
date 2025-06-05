@@ -142,7 +142,7 @@ about: {
     title: "スキル",
     icon: "Award",
     content:
-      "Next.js, React, TypeScript, Node.js, Express, Hono.js, Tailwind CSS, AWS, FireBaseDocker, GitHub Actions, Shadcn/ui, Prisma, Drizzle, Clerk, Npm, Bun, Pnpm, Three.js, R3F, GSAPなど",
+      "Next.js, React, TypeScript, Node.js, Express, Hono.js, Tailwind CSS, AWS, FireBase, Docker, GitHub Actions, Shadcn/ui, Prisma, Drizzle, Clerk, Npm, Bun, Pnpm, Three.js, R3F, GSAPなど",
   },
   achievement: {
     title: "最近の開発実績",
