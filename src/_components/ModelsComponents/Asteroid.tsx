@@ -7,9 +7,15 @@ Title: Large Asteroid / Small Moon (FREE)
 */
 
 import * as THREE from 'three'
-import { type JSX } from 'react'
+import { useRef, useState, useEffect, useMemo, type JSX } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { type GLTF } from 'three-stdlib'
+
+// モデルパスを定数化
+const MODEL_PATH = 'models/asteroid.glb';
+
+// 事前ロード
+useGLTF.preload(MODEL_PATH);
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -21,16 +27,60 @@ type GLTFResult = GLTF & {
 }
 
 export function Asteroid(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('models/asteroid.glb') as unknown as GLTFResult
+  const [visible, setVisible] = useState(false);
+  const ref = useRef<THREE.Group>(null);
+  
+  // 遅延ロードでパフォーマンス向上
+  useEffect(() => {
+    const timer = setTimeout(() => setVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+  
+  const { nodes, materials } = useGLTF(MODEL_PATH) as unknown as GLTFResult;
+  
+  // マテリアルの最適化
+  const optimizedMaterial = useMemo(() => {
+    if (!materials.PlanetMat) return null;
+    
+    // 元のマテリアルをクローンして最適化
+    const material = materials.PlanetMat.clone();
+    
+    // 物理ベースのマテリアルパラメータを最適化
+    material.roughness = 0.8;
+    material.metalness = 0.2;
+    material.clearcoat = 0; // クリアコートを無効化
+    material.clearcoatRoughness = 0;
+    material.sheen = 0; // シーンを無効化
+    material.envMapIntensity = 0.5; // 環境マップの強度を下げる
+    
+    return material;
+  }, [materials]);
+  
+  // ジオメトリの最適化
+  const optimizedGeometry = useMemo(() => {
+    if (!nodes.Object_2.geometry) return null;
+    
+    // ジオメトリを最適化（詳細度を下げる）
+    const geometry = nodes.Object_2.geometry.clone();
+    
+    // バウンディングボックスを計算して適切なフラスタムカリングを可能にする
+    geometry.computeBoundingBox();
+    geometry.computeBoundingSphere();
+    
+    return geometry;
+  }, [nodes]);
+  
+  // 表示されていない場合は何もレンダリングしない
+  if (!visible) return null;
+  
   return (
-    <group {...props} dispose={null}>
+    <group ref={ref} {...props} dispose={null}>
       <mesh
-        geometry={nodes.Object_2.geometry}
-        material={materials.PlanetMat}
+        geometry={optimizedGeometry || nodes.Object_2.geometry}
+        material={optimizedMaterial || materials.PlanetMat}
         rotation={[-Math.PI / 2, 0, 0]}
+        frustumCulled={true}
       />
     </group>
   )
 }
-
-useGLTF.preload('models/asteroid.glb')

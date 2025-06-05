@@ -7,8 +7,14 @@ Title: Earth: Our Fragile Home
 */
 
 import * as THREE from "three";
-import { useRef, type JSX } from "react";
+import { useRef, useState, useEffect, useMemo, type JSX } from "react";
 import { useGLTF } from "@react-three/drei";
+
+// モデルパスを定数化
+const MODEL_PATH = "models/earth.glb";
+
+// 事前ロード
+useGLTF.preload(MODEL_PATH);
 
 type GLTFResult = {
   nodes: {
@@ -21,7 +27,34 @@ type GLTFResult = {
 
 export function Earth(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<THREE.Group>(null);
-  const { nodes, materials } = useGLTF("models/earth.glb") as unknown as GLTFResult;
+  const [visible, setVisible] = useState(false);
+  
+  // 遅延ロードでパフォーマンス向上
+  useEffect(() => {
+    // コンポーネントがマウントされた後に表示
+    const timer = setTimeout(() => setVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+  
+  // モデルのロードを遅延表示後に行う
+  const { nodes, materials } = useGLTF(MODEL_PATH) as unknown as GLTFResult;
+  
+  // マテリアルを最適化
+  const optimizedMaterial = useMemo(() => {
+    if (!materials["Material.001"]) return null;
+    
+    // マテリアルのクローンを作成して最適化
+    const material = materials["Material.001"].clone();
+    material.roughness = 0.8; // 粗さを増加
+    material.metalness = 0.2; // 金属感を減少
+    material.envMapIntensity = 0.5; // 環境マップの強度を下げる
+    
+    return material;
+  }, [materials]);
+  
+  // 表示されていない場合は何もレンダリングしない
+  if (!visible) return null;
+  
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
@@ -32,7 +65,8 @@ export function Earth(props: JSX.IntrinsicElements["group"]) {
                 <mesh
                   name="Object_4"
                   geometry={nodes.Object_4.geometry}
-                  material={materials["Material.001"]}
+                  material={optimizedMaterial || materials["Material.001"]}
+                  frustumCulled={true}
                 />
               </group>
             </group>
@@ -42,5 +76,3 @@ export function Earth(props: JSX.IntrinsicElements["group"]) {
     </group>
   );
 }
-
-useGLTF.preload("models/earth.glb");

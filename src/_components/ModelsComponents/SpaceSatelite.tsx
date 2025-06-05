@@ -7,9 +7,15 @@ Title: Space Satellite
 */
 
 import * as THREE from 'three'
-import { type JSX } from 'react'
+import { useRef, useState, useEffect, useMemo, type JSX } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { type GLTF } from 'three-stdlib'
+
+// モデルパスを定数化
+const MODEL_PATH = 'models/space_satellite.glb';
+
+// 事前ロード
+useGLTF.preload(MODEL_PATH);
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -23,15 +29,56 @@ type GLTFResult = GLTF & {
 }
 
 export function SpaceSatelite(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('models/space_satellite.glb') as unknown as GLTFResult
+  const [visible, setVisible] = useState(false);
+  const ref = useRef<THREE.Group>(null);
+  
+  // 遅延ロードでパフォーマンス向上
+  useEffect(() => {
+    const timer = setTimeout(() => setVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+  
+  const { nodes, materials } = useGLTF(MODEL_PATH) as unknown as GLTFResult;
+  
+  // マテリアルの最適化
+  const optimizedMaterials = useMemo(() => {
+    if (!materials.Satellite || !materials.Satellite2) return null;
+    
+    return {
+      satellite: (() => {
+        const mat = materials.Satellite.clone();
+        mat.roughness = 0.7;
+        mat.metalness = 0.3;
+        mat.envMapIntensity = 0.5;
+        return mat;
+      })(),
+      satellite2: (() => {
+        const mat = materials.Satellite2.clone();
+        mat.roughness = 0.7;
+        mat.metalness = 0.3;
+        mat.envMapIntensity = 0.5;
+        return mat;
+      })()
+    };
+  }, [materials]);
+  
+  // 表示されていない場合は何もレンダリングしない
+  if (!visible) return null;
+  
   return (
-    <group {...props} dispose={null}>
+    <group ref={ref} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
-        <mesh geometry={nodes.Object_2.geometry} material={materials.Satellite} />
-        <mesh geometry={nodes.Object_3.geometry} material={materials.Satellite2} />
+        <mesh 
+          geometry={nodes.Object_2.geometry} 
+          material={optimizedMaterials?.satellite || materials.Satellite} 
+          frustumCulled={true}
+        />
+        <mesh 
+          geometry={nodes.Object_3.geometry} 
+          material={optimizedMaterials?.satellite2 || materials.Satellite2} 
+          frustumCulled={true}
+        />
       </group>
     </group>
   )
 }
-
-useGLTF.preload('models/space_satellite.glb')
