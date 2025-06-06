@@ -26,6 +26,27 @@ export const config = {
         "バックエンドにHono.jsを採用し、Next.jsのSSRやReactのuseOptimistic、Suspenseを積極的に活用することで処理速度とユーザビリティの向上を意識しました。",
     },
     {
+      name: "旅行管理アプリ",
+      image: "../textures/TravelManager.PNG",
+      repository: "https://github.com/renokazaki/Travel-Manager",
+      link: "https://travel-manager-gamma.vercel.app/",
+      techIcons: [
+        { name: "Next.js", icon: "/icons/Nextjs.png" },
+        { name: "Hono.js", icon: "/icons/Honojs.png" },
+        { name: "TypeScript", icon: "/icons/TypeScript.png" },
+        { name: "Tailwind CSS", icon: "/icons/Tailwindcss.png" },
+        { name: "Shadcn/ui", icon: "/icons/Shadcn.png" },
+        { name: "Prisma", icon: "/icons/Prisma.png" },
+        { name: "Clerk", icon: "/icons/Clerk.png" },
+        { name: "Stripe", icon: "/icons/Stripe.png" },
+        { name: "npm", icon: "/icons/Npm.png" },
+      ],
+      description:
+        "旅行のスケジュール調整、プラン立て、旅行後の生産まで全てを完結できるアプリです。\nマネタイズまでを視野に入れ作成しました。",
+      point:
+        "マネタイズまで意識しホスティングの選定や、Stripeの連携を行いました。\nハッカソンに参加し1ヶ月で作成したものです。",
+    },
+    {
       name: "タスク管理アプリ",
       image: "../textures/TaskManagement.png",
       repository: "https://github.com/renokazaki/Task_Management",
@@ -61,6 +82,21 @@ export const config = {
         "収支を管理する家計簿アプリです。カレンダーから取引が行われた日付を表示することで日付ごとの取引履歴も確認できます。",
       point:
         "ランディングページを作成し、ユーザ体験を考慮してシンプルで直感的なインターフェースを提供しました。",
+    },
+    {
+      name: "海底探索ホームページ",
+      image: "../textures/ExploreOcean.PNG",
+      repository: "https://github.com/renokazaki/scroll-portfolio",
+      link: "https://scroll-portfolio-two.vercel.app/",
+      techIcons: [
+        { name: "React", icon: "/icons/React.png" },
+        { name: "TypeScript", icon: "/icons/TypeScript.png" },
+        { name: "Three.js", icon: "/icons/threejs.png" },
+        { name: "npm", icon: "/icons/Npm.png" },
+      ],
+      description:
+        "R3F（React Three Fiber）を活用した海底探索をテーマにしたインタラクティブなWebサイトです。",
+      point: "ユーザーがページをスクロールするたびに、海底の景色や生物たちが自然に現れたり消えたりし、まるで実際に海中を潜っているかのような感覚を演出しています。従来の静的なWebページとは一線を画すインタラクティブなユーザーエクスペリエンスを提供しています。",
     },
     {
       name: "3Dモデル商品紹介サイト(iPhone)",
@@ -108,26 +144,6 @@ export const config = {
       description: "ハンバーガー積み上げゲームです。",
       point:
         "Three.jsで提供されている物理法則を実装することで、よりリアルなゲーム体験ができるようにしました。",
-    },
-    {
-      name: "作成中",
-      image: "../textures/ComingSoon.PNG",
-      repository: "https://github.com/renokazaki/Tower-Battle",
-      link: "https://tower-battle.vercel.app",
-      techIcons: [
-        { name: "Next.js", icon: "/icons/Nextjs.png" },
-        { name: "Hono.js", icon: "/icons/Honojs.png" },
-        { name: "TypeScript", icon: "/icons/TypeScript.png" },
-        { name: "Tailwind CSS", icon: "/icons/Tailwindcss.png" },
-        { name: "Shadcn/ui", icon: "/icons/Shadcn.png" },
-        { name: "Prisma", icon: "/icons/Prisma.png" },
-        { name: "Clerk", icon: "/icons/Clerk.png" },
-        { name: "Bun", icon: "/icons/Bun.png" },
-      ],
-      description:
-        "動画共有SNSです。Youtubeから提供されているAPIを使用することで動画の詳細を取得して表示しています。",
-      point:
-        "YoutubeのAPIを使用する。処理速度の速さにこだわる",
     },
   ],
 
