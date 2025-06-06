@@ -20,6 +20,7 @@ export const config = {
         { name: "Prisma", icon: "/icons/Prisma.png" },
         { name: "Clerk", icon: "/icons/Clerk.png" },
         { name: "Bun", icon: "/icons/Bun.png" },
+        { name: "Framer Motion", icon: "/icons/FramerMotion.png" },
       ],
       description: "友人と習慣の継続を促しあえるSNSです。Line Messaging APIを使用して友達が活動を始めると公式アカウントからリアルタイムでメッセージを受け取れます。",
       point:
@@ -40,6 +41,7 @@ export const config = {
         { name: "Clerk", icon: "/icons/Clerk.png" },
         { name: "Stripe", icon: "/icons/Stripe.png" },
         { name: "npm", icon: "/icons/Npm.png" },
+        { name: "Framer Motion", icon: "/icons/FramerMotion.png" },
       ],
       description:
         "旅行のスケジュール調整、プラン立て、旅行後の生産まで全てを完結できるアプリです。\nマネタイズまでを視野に入れ作成しました。",
@@ -82,6 +84,22 @@ export const config = {
         "収支を管理する家計簿アプリです。カレンダーから取引が行われた日付を表示することで日付ごとの取引履歴も確認できます。",
       point:
         "ランディングページを作成し、ユーザ体験を考慮してシンプルで直感的なインターフェースを提供しました。",
+    },
+    {
+      name: "ポートフォリオサイト",
+      image: "../textures/Portfolio.PNG",
+      repository: "https://github.com/renokazaki/MyWebsite-space-version",
+      link: "https://my-website-space-version.vercel.app/",
+      techIcons: [
+        { name: "React", icon: "/icons/React.png" },
+        { name: "TypeScript", icon: "/icons/TypeScript.png" },
+        { name: "Three.js", icon: "/icons/threejs.png" },
+        { name: "bun", icon: "/icons/Bun.png" },
+        { name: "Framer Motion", icon: "/icons/FramerMotion.png" },
+      ],
+      description:
+        "R3F（React Three Fiber）を活用した海底探索をテーマにしたインタラクティブなWebサイトです。",
+      point: "ユーザーがページをスクロールするたびに、海底の景色や生物たちが自然に現れたり消えたりし、まるで実際に海中を潜っているかのような感覚を演出しています。従来の静的なWebページとは一線を画すインタラクティブなユーザーエクスペリエンスを提供しています。",
     },
     {
       name: "海底探索ホームページ",
