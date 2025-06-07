@@ -1,6 +1,10 @@
 # 🌌 3D Portfolio Website
 
 React Three Fiber（R3F）を使用して宇宙空間を表現した、奥行きのあるポートフォリオサイトです。
+![image](https://github.com/user-attachments/assets/7a3967c0-a269-4128-8cf0-7e19a009e47b)
+![image](https://github.com/user-attachments/assets/94bdcf19-b106-450e-9523-e80318713c7d)
+
+
 
 ## ✨ 特徴
 
