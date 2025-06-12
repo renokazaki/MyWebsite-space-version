@@ -22,9 +22,9 @@ export const config = {
         { name: "Bun", icon: "/icons/Bun.png" },
         { name: "Framer Motion", icon: "/icons/FramerMotion.png" },
       ],
-      description: "友人と習慣の継続を促しあえるSNSです。Line Messaging APIを使用して友達が活動を始めると公式アカウントからリアルタイムでメッセージを受け取れます。",
+      description: "友人と習慣の継続を促しあえるSNSです。Line Messaging APIを使用して友達が活動を始めるとLineの公式アカウントからリアルタイムでメッセージを受け取れます。",
       point:
-        "バックエンドにHono.jsを採用し、Next.jsのSSRやReactのuseOptimistic、Suspenseを積極的に活用することで処理速度とユーザビリティの向上を意識しました。",
+        "フロントエンドにnext.js、バックエンドにhono.jsを採用したモノレポ構成で作成しました。また、SSRやSuspenseを積極的に活用することで処理速度とユーザビリティを意識しました。",
     },
     {
       name: "旅行管理アプリ",
@@ -46,25 +46,7 @@ export const config = {
       description:
         "旅行のスケジュール調整、プラン立て、旅行後の生産まで全てを完結できるアプリです。\nマネタイズまでを視野に入れ作成しました。",
       point:
-        "マネタイズまで意識しホスティングの選定や、Stripeの連携を行いました。\nハッカソンに参加し1ヶ月で作成したものです。",
-    },
-    {
-      name: "タスク管理アプリ",
-      image: "../textures/TaskManagement.png",
-      repository: "https://github.com/renokazaki/Task_Management",
-      link: "https://task-management-application-sable.vercel.app/",
-      techIcons: [
-        { name: "Next.js", icon: "/icons/Nextjs.png" },
-        { name: "TypeScript", icon: "/icons/TypeScript.png" },
-        { name: "Tailwind CSS", icon: "/icons/Tailwindcss.png" },
-        { name: "Shadcn/ui", icon: "/icons/Shadcn.png" },
-        { name: "Prisma", icon: "/icons/Prisma.png" },
-        { name: "Clerk", icon: "/icons/Clerk.png" },
-        { name: "npm", icon: "/icons/Npm.png" },
-      ],
-      description: "タスクをカテゴリ別に優先度や進捗を管理するアプリです。",
-      point:
-        "シンプルかつ直感的なインターフェースを提供し、グラフを導入することで登録されているタスクの進捗を可視化しました。普段自分が使う際に欲しい機能を考慮してタスク管理アプリを作成しました。",
+        "マネタイズまで意識しホスティングの選定や、Stripeの連携を行いました。\nハッカソンに参加し作成したものです。",
     },
     {
       name: "家計簿アプリ",
@@ -86,6 +68,24 @@ export const config = {
         "ランディングページを作成し、ユーザ体験を考慮してシンプルで直感的なインターフェースを提供しました。",
     },
     {
+      name: "タスク管理アプリ",
+      image: "../textures/TaskManagement.png",
+      repository: "https://github.com/renokazaki/Task_Management",
+      link: "https://task-management-application-sable.vercel.app/",
+      techIcons: [
+        { name: "Next.js", icon: "/icons/Nextjs.png" },
+        { name: "TypeScript", icon: "/icons/TypeScript.png" },
+        { name: "Tailwind CSS", icon: "/icons/Tailwindcss.png" },
+        { name: "Shadcn/ui", icon: "/icons/Shadcn.png" },
+        { name: "Prisma", icon: "/icons/Prisma.png" },
+        { name: "Clerk", icon: "/icons/Clerk.png" },
+        { name: "npm", icon: "/icons/Npm.png" },
+      ],
+      description: "タスクをカテゴリ別に優先度や進捗を管理するアプリです。",
+      point:
+        "シンプルかつ直感的なインターフェースを提供し、グラフを導入することで登録されているタスクの進捗を可視化しました。普段自分が使う際に欲しい機能を考慮してタスク管理アプリを作成しました。",
+    },
+    {
       name: "ポートフォリオサイト",
       image: "../textures/Portfolio.PNG",
       repository: "https://github.com/renokazaki/MyWebsite-space-version",
@@ -100,21 +100,6 @@ export const config = {
       description:
         "R3F（React Three Fiber）を活用した奥行きのあるポートフォリオサイトです。",
       point: "差別化を図るため勉強してきたR3Fの機能を活用してポートフォリオサイトを作成しました。",
-    },
-    {
-      name: "海底探索ホームページ",
-      image: "../textures/ExploreOcean.PNG",
-      repository: "https://github.com/renokazaki/scroll-portfolio",
-      link: "https://scroll-portfolio-two.vercel.app/",
-      techIcons: [
-        { name: "React", icon: "/icons/React.png" },
-        { name: "TypeScript", icon: "/icons/TypeScript.png" },
-        { name: "Three.js", icon: "/icons/threejs.png" },
-        { name: "npm", icon: "/icons/Npm.png" },
-      ],
-      description:
-        "R3F（React Three Fiber）を活用した海底探索をテーマにしたインタラクティブなWebサイトです。",
-      point: "ユーザーがページをスクロールするたびに、海底の景色や生物たちが自然に現れたり消えたりし、まるで実際に海中を潜っているかのような感覚を演出しています。従来の静的なWebページとは一線を画すインタラクティブなユーザーエクスペリエンスを提供しています。",
     },
     {
       name: "3Dモデル商品紹介サイト(iPhone)",
