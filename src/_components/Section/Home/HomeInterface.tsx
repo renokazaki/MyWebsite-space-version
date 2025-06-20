@@ -56,8 +56,8 @@ export default function HomeInterface() {
         >
           <motion.div
             className="bg-white w-[3px] h-[10px] rounded-[2px] mt-1"
-            initial={{ translateY: 0 }}
-            animate={{ translateY: 4 }}
+            initial={{ y: 0 }}
+            animate={{ y: 4 }}
             transition={{
               duration: 0.4,
               repeatDelay: 0.5,
