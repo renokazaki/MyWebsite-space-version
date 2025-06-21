@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { config } from "../../../config";
 import { useMobile } from "../../../hooks/useMobile";
-import { User, GraduationCap, Award, Heart, Coffee } from "lucide-react";
+import { User, GraduationCap, Award,  Coffee } from "lucide-react";
 // アイコン名の型を定義
 type IconName = "User" | "GraduationCap" | "Award" | "Heart" | "Coffee";
 
@@ -19,7 +19,6 @@ const aboutSections = [
   config.about.profile,
   config.about.skills,
   config.about.achievement,
-  config.about.appealPoint
 ] as AboutSection[];
 
 // アイコンを描画するコンポーネント
@@ -31,8 +30,6 @@ const RenderIcon = ({ iconName }: { iconName: IconName }) => {
       return <GraduationCap className="w-6 h-6 md:w-7 md:h-7 text-primary" />;
     case "Award":
       return <Award className="w-6 h-6 md:w-7 md:h-7 text-primary" />;
-    case "Heart":
-      return <Heart className="w-6 h-6 md:w-7 md:h-7 text-primary" />;
     case "Coffee":
       return <Coffee className="w-6 h-6 md:w-7 md:h-7 text-primary" />;
     default:

@@ -53,6 +53,8 @@ export default function ProjectInterface(): JSX.Element {
 
   return (
     <>
+      <h1 className="text-2xl md:text-3xl font-bold mb-6 text-white">Recently Products</h1>
+
       <section className="h-screen flex justify-start items-center">
         <motion.div
           className="p-2 md:p-4 w-full h-full md:w-[650px] lg:w-[700px] xl:w-[800px] max-w-full justify-center"
