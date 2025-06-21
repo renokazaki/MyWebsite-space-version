@@ -86,22 +86,6 @@ export const config = {
         "シンプルかつ直感的なインターフェースを提供し、グラフを導入することで登録されているタスクの進捗を可視化しました。普段自分が使う際に欲しい機能を考慮してタスク管理アプリを作成しました。",
     },
     {
-      name: "ポートフォリオサイト",
-      image: "../textures/Portfolio.PNG",
-      repository: "https://github.com/renokazaki/MyWebsite-space-version",
-      link: "https://my-website-space-version.vercel.app/",
-      techIcons: [
-        { name: "React", icon: "/icons/React.png" },
-        { name: "TypeScript", icon: "/icons/TypeScript.png" },
-        { name: "Three.js", icon: "/icons/threejs.png" },
-        { name: "bun", icon: "/icons/Bun.png" },
-        { name: "Framer Motion", icon: "/icons/FramerMotion.png" },
-      ],
-      description:
-        "R3F（React Three Fiber）を活用した奥行きのあるポートフォリオサイトです。",
-      point: "差別化を図るため勉強してきたR3Fの機能を活用してポートフォリオサイトを作成しました。",
-    },
-    {
       name: "3Dモデル商品紹介サイト(iPhone)",
       image: "../textures/IPhoneScroll.PNG",
       repository: "https://github.com/renokazaki/first_gsap_scrollapp",
@@ -116,21 +100,6 @@ export const config = {
       description:
         "iPhoneの3DモデルとR3F、GSAPを使用した縦スクロールサイトです。モデルや背景を変更することで様々な用途のサイトに応用できます。",
       point: "R3Fの機能とGSAPを活用してアニメーションを実装しました。",
-    },
-    {
-      name: "3Dモデル商品紹介サイト(コーラ)",
-      image: "../textures/Coke.PNG",
-      repository: "https://github.com/renokazaki/coke",
-      link: "https://coke-chi.vercel.app/",
-      techIcons: [
-        { name: "React", icon: "/icons/React.png" },
-        { name: "TypeScript", icon: "/icons/TypeScript.png" },
-        { name: "Three.js", icon: "/icons/threejs.png" },
-        { name: "npm", icon: "/icons/Npm.png" },
-      ],
-      description:
-        "私の大好きなコーラの3DモデルとR3Fを使用した縦スクロールサイトです。",
-      point: "R3Fの機能を活用して大好きなコーラの紹介サイトを作成しました。",
     },
     {
       name: "ハンバーガー積み上げゲーム",
@@ -161,7 +130,10 @@ about: {
     title: "スキル",
     icon: "Award",
     content:
-      "Next.js, React, TypeScript, Node.js, Express, Hono.js, Tailwind CSS, AWS, FireBase, Docker, GitHub Actions, Shadcn/ui, Prisma, Drizzle, Clerk, Npm, Bun, Pnpm, Three.js, R3F, GSAPなど",
+      "主要技術：Next.js, React, TypeScript, Node.js, Express, Hono.js, Tailwind CSS, AWS, FireBase, Docker, GitHub Actions, Shadcn/ui, Prisma, Drizzle, Clerk, Npm, Bun, Pnpm, Three.js, R3F, GSAPなど"
+      + "\n"
+      + "外部API連携、CICD、AWSを使ったホスティング、モノレポ構成など、実務で活用できる技術的取り組みを積極的に経験。"
+      ,
   },
   achievement: {
     title: "最近の開発実績",
@@ -172,22 +144,11 @@ URL: https://code-lesson.com/
 
 
 【AI駆動個人開発ハッカソン参加中】
-マネタイズを目標としたAI駆動開発によるオリジナルプロダクト作成に挑戦中。`,
-  },
-  appealPoint: {
-    title: "アピールポイント",
-    icon: "Coffee",
-    content: `【継続的な技術習得】
-Next.js、React、TypeScriptを日常的に触り、新機能や最新のベストプラクティスを積極的に学習。社内Udemy活用ランキング1位を獲得。
+マネタイズを目標としたAI駆動開発によるオリジナルプロダクト作成に挑戦中。\nスケジュール調整、プラン立て、旅行後の清算までを一元化するアプリを作成中。\nURL: https://travel-manager-gamma.vercel.app/
+
 
 【積極的なコミュニティ活動】
-チーム開発プロジェクト「Code Lesson」への参画、ハッカソンの参加、メンターとの技術相談、技術コミュニティへの参加、勉強会への積極的参加。
-
-【英語技術情報への対応力】
-英語の技術情報に苦手意識がなく、最新の海外技術情報もスムーズにキャッチアップ可能。
-
-【実践的な開発経験】
-外部API連携、CICD、AWSを使ったホスティング、モノレポ構成など、実務で活用できる技術的取り組みを積極的に経験。`,
+チーム開発プロジェクト「Code Lesson」への参画、ハッカソンの参加、メンターとの技術相談、技術コミュニティへの参加、勉強会への積極的参加。`,
   },
 },
 
