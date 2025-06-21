@@ -14,6 +14,7 @@ import {
 } from "./Section/index";
 import { config } from "../config";
 import { SpaceSky } from "./ModelsComponents/SpaceSky";
+import { Saturn } from "./ModelsComponents/Saturn";
 
 const SECTIONS_DISTANCE = 20;
 
@@ -85,7 +86,8 @@ export default function Experience() {
       <Environment preset="night" />
       <directionalLight position={[1, 1, 1]} intensity={4} />
       <ambientLight intensity={2} />
-      {/* Section */}
+      <Saturn position={[60, 40, -200]} scale={40} rotation={[0, Math.PI / 2, 0]}/>
+  3  {/* Section */}
       <group ref={sceneContainer}>
         <HomeSection />
         <ProjectSection SECTIONS_DISTANCE={SECTIONS_DISTANCE} />
