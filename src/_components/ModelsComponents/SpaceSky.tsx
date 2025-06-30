@@ -7,7 +7,7 @@ export function SpaceSky() {
         <Stars 
         radius={50} 
         depth={100} 
-        count={800} 
+        count={100} 
         factor={4} 
         saturation={0} 
         fade 
