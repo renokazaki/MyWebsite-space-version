@@ -22,31 +22,30 @@ export const config = {
         { name: "Bun", icon: "/icons/Bun.png" },
         { name: "Framer Motion", icon: "/icons/FramerMotion.png" },
       ],
-      description: "友人と習慣の継続を促しあえるSNSです。Line Messaging APIを使用して友達が活動を始めるとLineの公式アカウントからリアルタイムでメッセージを受け取れます。",
+      description:
+        "友人と習慣の継続を促しあえるSNSです。Line Messaging APIを使用して友達が活動を始めるとLineの公式アカウントからリアルタイムでメッセージを受け取れます。",
       point:
         "フロントエンドにnext.js、バックエンドにhono.jsを採用したモノレポ構成で作成しました。また、SSRやSuspenseを積極的に活用することで処理速度とユーザビリティを意識しました。",
     },
     {
-      name: "旅行管理アプリ",
-      image: "../textures/TravelManager.PNG",
-      repository: "https://github.com/renokazaki/Travel-Manager",
-      link: "https://travel-manager-gamma.vercel.app/",
+      name: "Zenn News Picker",
+      image: "../textures/ZennNewsPicker.PNG",
+      repository: "https://github.com/renokazaki/Zenn-News-Picker",
+      link: "https://zenn-news-picker.vercel.app/",
       techIcons: [
-        { name: "Next.js", icon: "/icons/Nextjs.png" },
-        { name: "Hono.js", icon: "/icons/Honojs.png" },
+        { name: "n8n", icon: "/icons/n8n.png" },
+        { name: "React", icon: "/icons/React.png" },
+        { name: "Express", icon: "/icons/Express.png" },
         { name: "TypeScript", icon: "/icons/TypeScript.png" },
         { name: "Tailwind CSS", icon: "/icons/Tailwindcss.png" },
         { name: "Shadcn/ui", icon: "/icons/Shadcn.png" },
         { name: "Prisma", icon: "/icons/Prisma.png" },
-        { name: "Clerk", icon: "/icons/Clerk.png" },
-        { name: "Stripe", icon: "/icons/Stripe.png" },
-        { name: "npm", icon: "/icons/Npm.png" },
-        { name: "Framer Motion", icon: "/icons/FramerMotion.png" },
+        { name: "Bun", icon: "/icons/Bun.png" },
       ],
       description:
-        "【現在作成中】旅行のスケジュール調整、プラン立て、旅行後の生産まで全てを完結できるアプリです。\nマネタイズまでを視野に入れ低コストで運用できるよう意識しました。",
+        "Zenn News Picker は、n8nを利用し、Zennの技術記事から興味のあるキーワードに基づいて自動的にフィルタリングを行い、AIによる要約を付与してWebアプリケーション上で表示するツールです。",
       point:
-        "マネタイズまで意識しホスティングの選定や、Stripeの連携を行いました。",
+        "バックエンドの処理にn8nを利用しwebアプリケーションを作成しました。効率的に且つ見逃すことがなく興味のあるジャンルの記事を確認できます。",
     },
     {
       name: "家計簿アプリ",
@@ -119,26 +118,25 @@ export const config = {
     },
   ],
 
-// 自己紹介セクションの構造
-about: {
-  profile: {
-    title: "プロフィール",
-    icon: "User",
-    content: "名前：岡崎 蓮\n西暦：1999年8月21日 25歳\n",
-  },
-  skills: {
-    title: "スキル",
-    icon: "Award",
-    content:
-      "主要技術：Next.js, React, TypeScript, Node.js, Express, Hono.js, Tailwind CSS, AWS, FireBase, Docker, GitHub Actions, Shadcn/ui, Prisma, Drizzle, Clerk, Npm, Bun, Pnpm, Three.js, R3F, GSAPなど"
-      + "\n"
-      + "外部API連携、CICD、AWSを使ったホスティング、モノレポ構成など、実務で活用できる技術的取り組みを積極的に経験。"
-      ,
-  },
-  achievement: {
-    title: "最近の開発実績",
-    icon: "Heart",
-    content: `【Code Lesson プロジェクト参加中】
+  // 自己紹介セクションの構造
+  about: {
+    profile: {
+      title: "プロフィール",
+      icon: "User",
+      content: "名前：岡崎 蓮\n西暦：1999年8月21日 25歳\n",
+    },
+    skills: {
+      title: "スキル",
+      icon: "Award",
+      content:
+        "主要技術：Next.js, React, TypeScript, Node.js, Express, Hono.js, Tailwind CSS, AWS, FireBase, Docker, GitHub Actions, Shadcn/ui, Prisma, Drizzle, Clerk, Npm, Bun, Pnpm, Three.js, R3F, GSAPなど" +
+        "\n" +
+        "外部API連携、CICD、AWSを使ったホスティング、モノレポ構成など、実務で活用できる技術的取り組みを積極的に経験。",
+    },
+    achievement: {
+      title: "最近の開発実績",
+      icon: "Heart",
+      content: `【Code Lesson プロジェクト参加中】
 プログラミング学習webサイト「Code Lesson」にコントリビューターとして参加。Next.js、Express、TypeScript、Docker、AWS、GitHub Actionsを使用。
 URL: https://code-lesson.com/
 
@@ -149,8 +147,8 @@ URL: https://code-lesson.com/
 
 【積極的なコミュニティ活動】
 チーム開発プロジェクト「Code Lesson」への参画、ハッカソンの参加、メンターとの技術相談、技術コミュニティへの参加、勉強会への積極的参加。`,
+    },
   },
-},
 
   contact: {
     name: "Ren Okazaki",
