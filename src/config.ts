@@ -28,24 +28,24 @@ export const config = {
         "フロントエンドにnext.js、バックエンドにhono.jsを採用したモノレポ構成で作成しました。また、SSRやSuspenseを積極的に活用することで処理速度とユーザビリティを意識しました。",
     },
     {
-      name: "Zenn News Picker",
-      image: "../textures/ZennNewsPicker.PNG",
-      repository: "https://github.com/renokazaki/Zenn-News-Picker",
-      link: "https://zenn-news-picker.vercel.app/",
+      name: "News Picker",
+      image: "../textures/NewsPicker.PNG",
+      repository: "https://github.com/renokazaki/News-Picker",
+      link: "https://news-picker-alpha.vercel.app/dashboard",
       techIcons: [
         { name: "n8n", icon: "/icons/n8n.png" },
+        { name: "Next.js", icon: "/icons/Nextjs.png" },
         { name: "React", icon: "/icons/React.png" },
-        { name: "Express", icon: "/icons/Express.png" },
         { name: "TypeScript", icon: "/icons/TypeScript.png" },
         { name: "Tailwind CSS", icon: "/icons/Tailwindcss.png" },
         { name: "Shadcn/ui", icon: "/icons/Shadcn.png" },
         { name: "Prisma", icon: "/icons/Prisma.png" },
-        { name: "Bun", icon: "/icons/Bun.png" },
+        { name: "jotai", icon: "/icons/Jotai.png" },
       ],
       description:
-        "Zenn News Picker は、n8nを利用し、Zennの技術記事から興味のあるキーワードに基づいて自動的にフィルタリングを行い、AIによる要約を付与してWebアプリケーション上で表示するツールです。",
+        "News Picker は、AIオートメーションのn8nを利用し、Zennの技術記事から興味のあるキーワードに基づいて自動的にフィルタリングを行い、AIによる要約を付与してWebアプリケーション上で表示するツールです。",
       point:
-        "バックエンドの処理にn8nを利用しwebアプリケーションを作成しました。効率的に且つ見逃すことがなく興味のあるジャンルの記事を確認できます。",
+        "Next.jsのISRを使用することで高速なコンテンツの表示を実現し、効率的に且つ見逃すことがなく興味のあるジャンルの記事を確認できます。",
     },
     {
       name: "家計簿アプリ",
