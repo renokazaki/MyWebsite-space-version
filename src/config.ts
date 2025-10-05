@@ -33,6 +33,7 @@ export const config = {
       repository: "https://github.com/renokazaki/News-Picker",
       link: "https://news-picker-alpha.vercel.app/dashboard",
       techIcons: [
+        { name: "Tavily", icon: "/icons/Tavily.png" },
         { name: "n8n", icon: "/icons/n8n.png" },
         { name: "Next.js", icon: "/icons/Nextjs.png" },
         { name: "React", icon: "/icons/React.png" },
@@ -43,9 +44,9 @@ export const config = {
         { name: "jotai", icon: "/icons/Jotai.png" },
       ],
       description:
-        "News Picker は、AIオートメーションのn8nを利用し、Zennの技術記事から興味のあるキーワードに基づいて自動的にフィルタリングを行い、AIによる要約を付与してWebアプリケーション上で表示するツールです。",
+        "News Picker は【Tavily API】と【n8n】を利用し、興味のあるキーワードに基づいて自動的に情報の収集、フィルタリング、要約を行い、Webアプリケーション上で表示してくれるアプリケーションです。",
       point:
-        "Next.jsのISRを使用することで高速なコンテンツの表示を実現し、効率的に且つ見逃すことがなく興味のあるジャンルの記事を確認できます。",
+        "Next.jsのISRを使用することで高速なコンテンツの表示を実現し、効率的に且つ見逃すことがなく興味のあるキーワードに基づいて情報を収集できます。",
     },
     {
       name: "家計簿アプリ",
