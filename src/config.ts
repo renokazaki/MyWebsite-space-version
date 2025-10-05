@@ -44,7 +44,7 @@ export const config = {
         { name: "jotai", icon: "/icons/Jotai.png" },
       ],
       description:
-        "News Picker は【Tavily API】と【n8n】を利用し、興味のあるキーワードに基づいて自動的に情報の収集、フィルタリング、要約を行い、Webアプリケーション上で表示してくれるアプリケーションです。",
+        "News Picker はTavily APIとn8nを利用し、興味のあるキーワードに基づいて自動的に情報の収集、フィルタリング、要約を行い、Webアプリケーション上で表示してくれるアプリケーションです。",
       point:
         "Next.jsのISRを使用することで高速なコンテンツの表示を実現し、効率的に且つ見逃すことがなく興味のあるキーワードに基づいて情報を収集できます。",
     },
