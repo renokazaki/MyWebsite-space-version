@@ -41,12 +41,13 @@ export const config = {
         { name: "Tailwind CSS", icon: "/icons/Tailwindcss.png" },
         { name: "Shadcn/ui", icon: "/icons/Shadcn.png" },
         { name: "Prisma", icon: "/icons/Prisma.png" },
+        { name: "Clerk", icon: "/icons/Clerk.png" },
         { name: "jotai", icon: "/icons/Jotai.png" },
       ],
       description:
-        "News Picker はTavily APIとn8nを利用し、興味のあるキーワードに基づいて自動的に情報の収集、フィルタリング、要約を行い、Webアプリケーション上で表示してくれるアプリケーションです。",
+        "News Picker はユーザが登録した興味のあるキーワードに基づいてTavilyのAPIとn8nを利用しAIによる情報の自動収集、フィルタリングと要約を行いWebアプリケーション上で表示するツールです。",
       point:
-        "Next.jsのISRを使用することで高速なコンテンツの表示を実現し、効率的に且つ見逃すことがなく興味のあるキーワードに基づいて情報を収集できます。",
+        "n8nを使用してAIを活用した自動収集、フィルタリングと要約を行うことで効率的に情報を収集できるようにしました。",
     },
     {
       name: "家計簿アプリ",
